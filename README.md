@@ -2,7 +2,7 @@
 
 Kod źródłowy mojego osobistego portfolio w HTML i CSS. Strona to cyfrowa wizytówka, która udowadnia, że twarda analityka danych świetnie łączy się z umiejętnościami miękkimi i zarządzaniem. Prezentuje moje doświadczenie zawodowe, projekty Machine Learning oraz aktywną działalność studencką.
 
-🌐 **[Zobacz stronę na żywo](https://mzntk.github.io/strona-new)** *(pamiętaj o podmianie linku po wdrożeniu na GitHub Pages!)*
+🌐 **[Zobacz stronę na żywo](https://mzntk.github.io/strona-new)**
 
 ## 🛠 Technologie
 
@@ -28,4 +28,4 @@ Strona nie wymaga żadnego środowiska serwerowego ani procesu budowania (build 
 
 1. Skopiuj repozytorium na swój komputer:
    ```bash
-   git clone [https://github.com/mzntk/NAZWA_TWOJEGO_REPOZYTORIUM.git](https://github.com/mzntk/NAZWA_TWOJEGO_REPOZYTORIUM.git)
+   git clone [https://github.com/mzntk/strona-new.git](https://github.com/mzntk/strona-new.git)
