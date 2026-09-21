@@ -1,0 +1,178 @@
+:root {
+    --bg-color: #faf9f7;
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    --pastel-blue: #d6e4f0;
+    --pastel-pink: #f6e6eb;
+    --pastel-green: #e1eedd;
+    --pastel-yellow: #fef1e6;
+    --pastel-purple: #e8e3f4;
+    --white: #ffffff;
+    --shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+    --shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Nawigacja */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 30px 20px;
+    background: transparent;
+}
+nav a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    padding-bottom: 5px;
+}
+nav a:hover, nav a.active {
+    color: var(--text-main);
+    border-bottom: 2px solid var(--pastel-blue);
+}
+
+/* Kontenery i siatki */
+.container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 30px; }
+
+/* Karty */
+.card {
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Typografia */
+h1 { font-size: 3rem; margin-bottom: 10px; color: var(--text-main); }
+h2 { font-size: 2rem; margin-bottom: 20px; color: var(--text-main); }
+h3 { font-size: 1.3rem; margin-bottom: 5px; }
+
+.date-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Kolory */
+.bg-blue { background-color: var(--pastel-blue); }
+.bg-pink { background-color: var(--pastel-pink); }
+.bg-green { background-color: var(--pastel-green); }
+.bg-yellow { background-color: var(--pastel-yellow); }
+.bg-purple { background-color: var(--pastel-purple); }
+.bg-white { background-color: var(--white); }
+
+ul.tasks { list-style-type: none; margin-top: 15px; }
+ul.tasks li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    color: var(--text-main); /* Zmienione dla lepszego kontrastu na kolorach */
+}
+ul.tasks li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--text-main);
+    font-weight: bold;
+}
+
+/* Tagi technologii */
+.tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; margin-bottom: 15px; }
+.tag {
+    background: var(--white);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Zdjęcia Instagram (4:5) */
+.ig-photo {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.ig-photo:hover {
+    transform: scale(1.02);
+}
+
+/* Sekcja O mnie */
+.about-section { display: flex; align-items: center; gap: 40px; margin-bottom: 60px; }
+.profile-photo {
+    width: 250px; height: 250px; border-radius: 50%;
+    background-color: var(--pastel-pink); object-fit: cover;
+    flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+    color: var(--text-muted); font-weight: bold; box-shadow: var(--shadow);
+}
+.widget-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.widget-link { text-decoration: none; color: inherit; display: block; }
+.widget-link .card { height: 100%; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer; }
+.widget-icon { font-size: 2.5rem; margin-bottom: 15px; }
+
+/* Animacje wejścia */
+.fade-in { animation: fadeIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; opacity: 0; transform: translateY(15px); }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+@keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    h1 { font-size: 2.2rem; }
+    nav { flex-wrap: wrap; gap: 15px; }
+    .about-section { flex-direction: column; text-align: center; }
+}
+
+/* Wyróżnione linki (np. na podstronie Samorząd) */
+.btn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--white);
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin: 15px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.btn-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    color: #4a69bd; /* Delikatny niebieski akcent przy najechaniu */
+}
+
+.btn-link::after {
+    content: "↗";
+    font-size: 1.1rem;
+    font-weight: 500;
+}

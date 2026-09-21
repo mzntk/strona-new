@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maja Zontek - Projekty</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="index.html">O mnie</a>
+        <a href="doswiadczenie.html">Doświadczenie</a>
+        <a href="samorzad.html">Samorząd</a>
+        <a href="projekty.html" class="active">Projekty</a>
+    </nav>
+
+    <div class="container fade-in">
+        <header style="margin-bottom: 40px;">
+            <h2>Studia i Projekty Analityczne</h2>
+        </header>
+
+        <div class="card bg-yellow fade-in delay-1" style="margin-bottom: 30px;">
+            <h3>Wizualizacja Marki Barbie</h3>
+            <p style="margin-bottom: 15px;">Projekt zaliczeniowy z Wizualizacji Danych</p>
+            
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Matplotlib</span>
+                <span class="tag">Seaborn</span>
+                <span class="tag">Jupyter Notebook</span>
+                <a href="https://github.com/mzntk/barbie" target="_blank" class="tag" style="background: var(--text-main); text-decoration: none; color: var(--white);">Link do repozytorium GitHub</a>
+            </div>
+
+            <p>Projekt analityczny badający 65 lat historii marki Barbie, transformację biznesową Mattel oraz fenomen "Barbenheimer". Pokazuje, że Barbie to potężne, globalne imperium danych.</p>
+            <ul class="tasks">
+                <li><strong>Historia Finansowa:</strong> Analiza wzlotów i upadków na giełdzie, krachu 1998-2000 i szczytu w 2014.</li>
+                <li><strong>Demografia Uniwersum:</strong> Struktura postaci w animacjach udowadniająca dominację kobiecej sprawczości.</li>
+                <li><strong>Trendy i Anomalie:</strong> Skoki popularności w Google Trends.</li>
+                <li><strong>Efekt Barbenheimer:</strong> Wpływ premiery z 2023 r. na wyniki box office i historyczne zaburzenie sezonowości.</li>
+            </ul>
+        </div>
+
+        <div class="card bg-purple fade-in delay-2">
+            <h3>Analiza strategii zjazdów do Pit Stopu w Formule 1</h3>
+            <p style="margin-bottom: 15px;">Pracownia analizy danych / Modelowanie matematyczne i analiza danych MFI UG</p>
+            
+            <div class="tags">
+                <span class="tag">R</span>
+                <span class="tag">caret</span>
+                <span class="tag">rpart</span>
+                <span class="tag">ggplot2</span>
+                <span class="tag">dplyr</span>
+                <span class="tag">Machine Learning</span>
+                <a href="https://github.com/mzntk/predictive-f1-strategy" target="_blank" class="tag" style="background: var(--text-main); text-decoration: none; color: var(--white);">Link do repozytorium GitHub</a>
+            </div>
+
+            <p>Budowa i porównanie modeli uczenia maszynowego przewidujących decyzję o zjeździe kierowcy F1 do alei serwisowej na kolejnym okrążeniu, w oparciu o parametry opon, czasy i postęp wyścigu.</p>
+            <ul class="tasks">
+                <li><strong>Regresja Logistyczna:</strong> Najsłabszy model (Czułość 14.4%, F1=0.22) – liniowa granica nie radzi sobie z nieliniowymi zjawiskami na torze.</li>
+                <li><strong>Drzewo Decyzyjne:</strong> Model kompromisowy (Czułość 41.2%, F1=0.48) – dylemat między interpretowalnością a mocą predykcyjną.</li>
+                <li><strong>k-Najbliższych Sąsiadów (KNN):</strong> Zwycięzca (Czułość 67.6%, F1=0.741, Balanced Accuracy >81%) – model deklasujący, doskonale radzący sobie z grupowaniem podobnych momentów wyścigowych.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
